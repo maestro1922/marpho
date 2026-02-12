@@ -1,0 +1,4 @@
+- [x] Add JavaScript event listener to the purchase form to handle submission
+- [x] Prevent default form submission
+- [x] Display modal with "OUR TEAM WILL CONTACT YOU SHORTLY" in white text on black background
+- [x] Add Purchase link to navigation bar in all HTML pages (index.html, about.html, trucks.html, contact.html, purchase.html)

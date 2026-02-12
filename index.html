@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marpho - All-encompassing Transport Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #000000;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #000000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 24px;
+            color: #FFFFFF;
+        }
+
+        .logo-text span {
+            color: #FFFFFF;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #FFFFFF;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('truck0.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 180px 0 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-weight: 300;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #000000;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: #000000;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Trucks Section */
+        .trucks-section {
+            background-color: #f8f9fa;
+        }
+        
+        .trucks-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .truck-card {
+            flex: 1;
+            min-width: 300px;
+            margin: 15px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .truck-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .truck-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .truck-content {
+            padding: 25px;
+        }
+        
+        .truck-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #000000;
+        }
+
+        .shop-button {
+            display: inline-block;
+            background-color: #000000;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: background-color 0.3s;
+        }
+
+        .shop-button:hover {
+            background-color: #000000;
+        }
+        
+        /* Brands Section */
+        .brands-section {
+            background-color: white;
+        }
+        
+        .brands-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        /* Welcome Section */
+        .welcome-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('truck0.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #FFFFFF;
+        }
+
+        .welcome-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .welcome-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+
+        .welcome-text h2 {
+            font-size: 36px;
+            margin-bottom: 25px;
+            color: #FFFFFF;
+        }
+
+        .welcome-text p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            color: #FFFFFF;
+        }
+
+        .learn-more {
+            display: inline-block;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid #FFFFFF;
+            padding: 12px 30px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .learn-more:hover {
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+        
+        .welcome-image {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background: url('welcome.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background-color: #f8f9fa;
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .stat-icon {
+            font-size: 48px;
+            color: #cc0000;
+            margin-bottom: 20px;
+        }
+        
+        .stat-item h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #003366;
+        }
+        
+        /* ================= PRODUCTS ================= */
+        .products{
+            background:#FFFFFF;
+            padding:70px 0;
+            margin-top:80px;
+        }
+        .products h2{
+            text-align:left;
+            color: #000000;
+        }
+        .products p{
+            max-width:900px;
+            font-size:14px;
+            margin-bottom:40px;
+            color: #000000;
+        }
+        .product-grid{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:30px;
+        }
+        .card{
+            background:#fff;
+            border: 1px solid #000000;
+        }
+        .card img{
+            width:100%;
+            height:220px;
+            object-fit:cover;
+        }
+        .card-content{
+            padding:20px;
+        }
+        .card-content h4{
+            margin:0 0 10px;
+            color: #000000;
+        }
+        .card-content p{
+            font-size:13px;
+            line-height:1.5;
+            color: #000000;
+        }
+        .card-content a{
+            display:inline-block;
+            margin-top:15px;
+            padding:10px 20px;
+            background:#000000;
+            color:#FFFFFF;
+            text-decoration:none;
+            font-size:13px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #000000;
+            color: #FFFFFF;
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+            padding-right: 20px;
+        }
+
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: #FFFFFF;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: #FFFFFF;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #FFFFFF;
+            color: #FFFFFF;
+            font-size: 14px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero h1 {
+                font-size: 44px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+            .welcome-text h2 {
+                font-size: 32px;
+            }
+
+            .hydrogen-text h2 {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .truck-card {
+                min-width: 100%;
+                margin: 15px 0;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .welcome-text h2 {
+                font-size: 30px;
+            }
+
+            .hydrogen-text h2 {
+                font-size: 26px;
+            }
+
+            .stat-item {
+                padding: 25px;
+            }
+
+            .stat-item h3 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #000000;
+                flex-direction: column;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+                margin-bottom: 15px;
+            }
+
+            .hero p {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+
+            .section-title {
+                margin-bottom: 40px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .welcome-container,
+            .hydrogen-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .welcome-text,
+            .hydrogen-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .welcome-text h2,
+            .hydrogen-text h2 {
+                font-size: 28px;
+            }
+
+            .welcome-image,
+            .hydrogen-image {
+                width: 100%;
+                height: 300px;
+                margin: 0 auto;
+            }
+
+            .truck-card {
+                margin: 10px 0;
+            }
+
+            .truck-content {
+                padding: 20px;
+            }
+
+            .truck-content h3 {
+                font-size: 20px;
+            }
+
+            .stat-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+            }
+
+            .stat-item {
+                padding: 20px;
+            }
+
+            .stat-icon {
+                font-size: 40px;
+            }
+
+            .stat-item h3 {
+                font-size: 18px;
+            }
+
+            .specs-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .spec-item {
+                padding: 12px;
+            }
+
+            .spec-value {
+                font-size: 20px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-column {
+                margin-bottom: 30px;
+                padding-right: 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            .hero {
+                padding: 100px 0 50px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .section-title h2 {
+                font-size: 24px;
+            }
+
+            .welcome-text h2,
+            .hydrogen-text h2 {
+                font-size: 24px;
+            }
+
+            .welcome-text p,
+            .hydrogen-text p {
+                font-size: 16px;
+            }
+
+            .truck-content h3 {
+                font-size: 18px;
+            }
+
+            .truck-content p {
+                font-size: 14px;
+            }
+
+            .stat-item h3 {
+                font-size: 16px;
+            }
+
+            .stat-item p {
+                font-size: 14px;
+            }
+
+            .brands-content {
+                font-size: 16px;
+            }
+
+            .footer-column h3 {
+                font-size: 18px;
+            }
+
+            .footer-column ul li {
+                margin-bottom: 8px;
+            }
+
+            .copyright {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .section-title h2 {
+                font-size: 22px;
+            }
+
+            .welcome-text h2,
+            .hydrogen-text h2 {
+                font-size: 22px;
+            }
+
+            .truck-content h3 {
+                font-size: 16px;
+            }
+
+            .stat-item h3 {
+                font-size: 14px;
+            }
+
+            .stat-icon {
+                font-size: 35px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .card-content {
+                padding: 15px;
+            }
+
+            .card-content h4 {
+                font-size: 16px;
+            }
+
+            .card-content p {
+                font-size: 12px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" fill="#000000"/>
+                        <text x="20" y="27" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="20" font-weight="bold">M</text>
+                    </svg>
+                </div>
+                <div class="logo-text">MARPHO TRADING COMPANY LIMITED</div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trucks.html">Trucks</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="purchase.html">Purchase</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>All-encompassing Transport Solutions</h1>
+            <p>Providing global customers with diverse and efficient transportation solutions for a sustainable world.</p>
+            <a href="purchase.html" class="shop-button">SHOP FOR A NEW VEHICLE</a>
+        </div>
+    </section>
+
+    <!-- Trucks Section -->
+    <section class="trucks-section" id="trucks">
+        <div class="container">
+            <div class="section-title">
+                <h2>Marpho Trucks</h2>
+                <p>Providing global customers with diverse and efficient transportation solutions for a sustainable world.</p>
+            </div>
+            
+            <div class="trucks-container">
+                <div class="truck-card">
+                    <img src="truck1.jpg" alt="Cement Mixer Truck" class="truck-img">
+                    <div class="truck-content">
+                        <h3>Concrete Mixer Trucks</h3>
+                        <p>Heavy-duty mixers designed for construction sites with advanced mixing technology and durability.</p>
+                    </div>
+                </div>
+                
+                <div class="truck-card">
+                    <img src="truck8.jpeg" alt="Light Truck" class="truck-img">
+                    <div class="truck-content">
+                        <h3>Dump trucks</h3>
+                        <p>dump trucks are designed for transporting and unloading loose material (like sand or gravel), while tractor heads are designed to pull various types of traile</p>
+                    </div>
+                </div>
+                
+                <div class="truck-card">
+                    <img src="truck9.jpeg" alt="Cargo Truck" class="truck-img">
+                    <div class="truck-content">
+                        <h3>Tractor heads</h3>
+                        <p>A heavy-duty towing vehicle designed specifically to haul semi-trailers. Unlike a rigid truck </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Marpho Brands</h2>
+            </div>
+            <div class="brands-content">
+                <p>Marpho specializes in selling Tractor Heads for efficient long-haul transportation.<br>
+We offer Dump Trucks ideal for construction and mining operations.<br>
+Our Concrete Mixers provide reliable mixing and delivery for construction projects.<br>
+we supply a variety of Trailers for versatile cargo hauling needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="container">
+            <div class="welcome-container">
+                <div class="welcome-text">
+                    <h2>Welcome to Marpho</h2>
+                    <p> Marpho is a company that specializes in the importation and sale of trucks from international markets. It sources heavy-duty and medium-duty trucks from China, ensuring high quality and performance. The company manages logistics, customs clearance, and documentation to deliver vehicles efficiently to local buyers. By offering reliable, globally sourced trucks, Morpho provides transport operators with options not easily available domestically. This supports the growth of the regional transportation industry by expanding access to diverse and durable truck models.</p>
+                    <a href="about.html" class="learn-more">More about Marpho</a>
+                </div>
+                <div class="welcome-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>MARPHO AT A GLANCE</h2>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Company Overview</h3>
+                    <p>Marpho is a truck-selling company specializing in sourcing high-quality trucks from outside nations. The company focuses on providing reliable commercial vehicles.</p>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3>International Sourcing & Shipping</h3>
+                    <p>Marpho imports trucks from reputable global markets, giving customers access to a wide range of vehicle options.</p>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Product Range</h3>
+                    <p>Marpho offers various types of trucks to meet different business needs, including cargo trucks, light trucks, and heavy-duty vehicles.</p>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Customer Commitment</h3>
+                    <p>Marpho is committed to customer satisfaction by providing transparent information and professional support throughout the purchasing process. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PRODUCTS ================= -->
+    <section class="products">
+    <div class="container">
+
+    <h2>How to Order from Abroad</h2>
+    <p>
+    All product brands under Marpho share the R&D and manufacturing resources
+    within the Group, operating collaboratively in different market segments worldwide.
+    </p>
+
+    <div class="product-grid">
+
+        <div class="card">
+            <img src="truck0.jpg">
+            <div class="card-content">
+                <h4>Step 1: EXPLORE TRUCKS</h4>
+                <p>Explore our range of trucks and select the model that best fits your shipping and transportation requirements for international orders.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="truck1.jpg">
+            <div class="card-content">
+                <h4>Step 2: DETAILS</h4>
+                <p>Collect all necessary documentation, shipping details, and customs information required for ordering trucks from abroad.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="truck8.jpeg">
+            <div class="card-content">
+                <h4>Step 3: ORDER</h4>
+                <p>Reach out to our team for guidance on placing your order, arranging shipping, and ensuring smooth delivery worldwide.</p>
+                <a href="purchase.html" class="btn">ORDER NOW</a>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>MARPHO</h3>
+                    <p>Providing global customers with diverse and efficient transportation solutions for a sustainable world.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="trucks.html">Truck</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                 <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Marpho Industry Goba ,Tanzania</li>
+                        <li><i class="fas fa-phone"></i> +255710045928</li>
+                        <li><i class="fas fa-envelope"></i> info@marpho.com</li>
+                        <li><a href="https://wa.me/255710045928" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; color: #ffffff; font-weight: 600; font-size: 1.1rem;"><i class="fab fa-whatsapp" style="font-size: 1.5rem;"></i> +255 710 045 928</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Marpho. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ScrollReveal animations
+        ScrollReveal().reveal('.section-title', {
+            delay: 200,
+            distance: '50px',
+            origin: 'bottom',
+            duration: 1000
+        });
+
+        ScrollReveal().reveal('.truck-card', {
+            delay: 300,
+            distance: '50px',
+            origin: 'bottom',
+            duration: 1000,
+            interval: 200
+        });
+
+        ScrollReveal().reveal('.brands-content', {
+            delay: 200,
+            distance: '50px',
+            origin: 'bottom',
+            duration: 1000
+        });
+
+        ScrollReveal().reveal('.welcome-text', {
+            delay: 200,
+            distance: '50px',
+            origin: 'left',
+            duration: 1000
+        });
+
+        ScrollReveal().reveal('.welcome-image', {
+            delay: 400,
+            distance: '50px',
+            origin: 'right',
+            duration: 1000
+        });
+
+        ScrollReveal().reveal('.stat-item', {
+            delay: 200,
+            distance: '50px',
+            origin: 'bottom',
+            duration: 1000,
+            interval: 150
+        });
+
+        ScrollReveal().reveal('.products', {
+            delay: 200,
+            distance: '50px',
+            origin: 'bottom',
+            duration: 1000
+        });
+
+        ScrollReveal().reveal('.card', {
+            delay: 300,
+            distance: '50px',
+            origin: 'bottom',
+            duration: 1000,
+            interval: 200
+        });
+
+        ScrollReveal().reveal('.footer-column', {
+            delay: 200,
+            distance: '50px',
+            origin: 'bottom',
+            duration: 1000,
+            interval: 200
+        });
+    </script>
+</body>
+</html>
